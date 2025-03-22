@@ -28,7 +28,7 @@ public class JsonUtility {
             reader.close();
             inputStream.close();
 
-            Log.d(TAG, "JSON content: " + jsonBuilder.toString());
+            Log.d(TAG, "JSON content: " + jsonBuilder);
 
             JSONArray jsonArray = new JSONArray(jsonBuilder.toString());
             Log.d(TAG, "JSON length: " + jsonArray.length());
