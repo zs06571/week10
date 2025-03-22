@@ -81,8 +81,10 @@ public class JsonUtility {
 
             Log.d(TAG, "Total movie: " + movieList.size());
         } catch (JSONException e) {
+            ErrorHandler.handleError(context, e, "JSON warning: " + e.getMessage());
             Log.e(TAG, "JSON warning: " + e.getMessage());
         } catch (Exception e) {
+            ErrorHandler.handleError(context, e, "load movie fail: " + e.getMessage());
             Log.e(TAG, "load movie fail: " + e.getMessage(), e);
         }
         return movieList;
